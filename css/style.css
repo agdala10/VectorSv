@@ -1,0 +1,88 @@
+/* VectorSv site — neon theme matching the app icon (cyan / magenta / orange on deep navy). */
+:root {
+  --navy: #0a0e27;
+  --navy-2: #11163a;
+  --cyan: #00d4ff;
+  --magenta: #ff2fb3;
+  --orange: #ff9a00;
+}
+html { scroll-behavior: smooth; }
+body {
+  background: radial-gradient(1200px 600px at 50% -10%, #1a2060 0%, var(--navy) 60%) fixed, var(--navy);
+  color: #e8ecff;
+  padding-top: 66px;
+}
+#particles { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+nav, header, section, footer { position: relative; z-index: 1; }
+.text-sv { color: var(--orange); }
+.text-dim { color: #9aa3c7; }
+.nav-glass { background: rgba(10, 14, 39, .82); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0, 212, 255, .18); }
+.brand-icon { border-radius: 10px; box-shadow: 0 0 12px rgba(0, 212, 255, .55); }
+.version-badge { background: linear-gradient(135deg, var(--cyan), var(--magenta)); border: 0; }
+
+.hero { padding: 4.5rem 0 3.5rem; }
+.hero-icon {
+  border-radius: 28px;
+  box-shadow: 0 0 34px rgba(0, 212, 255, .45), 0 0 90px rgba(255, 47, 179, .28), 0 18px 50px rgba(0, 0, 0, .6);
+  animation: float 5s ease-in-out infinite;
+}
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+.hero-sub { color: #cdd5f7; font-weight: 500; }
+.hero-desc { max-width: 760px; color: #aeb7dd; }
+
+.btn-neon {
+  background: linear-gradient(135deg, #0090c8, #0057ff);
+  border: 1px solid rgba(0, 212, 255, .6);
+  color: #fff;
+  box-shadow: 0 0 18px rgba(0, 212, 255, .35), inset 0 0 12px rgba(255, 255, 255, .08);
+  transition: transform .15s ease, box-shadow .2s ease;
+}
+.btn-neon:hover { color: #fff; transform: translateY(-2px); box-shadow: 0 0 30px rgba(0, 212, 255, .6), 0 10px 26px rgba(0, 0, 0, .5); }
+.dl-magenta { background: linear-gradient(135deg, #c81d8b, #6a1bb5); border-color: rgba(255, 47, 179, .6); box-shadow: 0 0 18px rgba(255, 47, 179, .35), inset 0 0 12px rgba(255, 255, 255, .08); }
+.dl-magenta:hover { box-shadow: 0 0 30px rgba(255, 47, 179, .6), 0 10px 26px rgba(0, 0, 0, .5); }
+.dl-orange { background: linear-gradient(135deg, #c86a00, #b53a1b); border-color: rgba(255, 154, 0, .6); box-shadow: 0 0 18px rgba(255, 154, 0, .35), inset 0 0 12px rgba(255, 255, 255, .08); }
+.dl-orange:hover { box-shadow: 0 0 30px rgba(255, 154, 0, .6), 0 10px 26px rgba(0, 0, 0, .5); }
+.dl-card { display: inline-flex; align-items: center; gap: .7rem; text-align: left; }
+.dl-card i { font-size: 1.7rem; }
+.dl-card span { display: flex; flex-direction: column; line-height: 1.25; }
+.dl-card small { font-size: .72rem; opacity: .85; font-weight: 400; }
+
+.section-title { font-weight: 700; text-shadow: 0 0 24px rgba(0, 212, 255, .35); }
+.feat {
+  background: linear-gradient(180deg, rgba(255, 255, 255, .05), rgba(255, 255, 255, .015));
+  border: 1px solid rgba(0, 212, 255, .22);
+  border-radius: 16px;
+  padding: 1.5rem;
+  height: 100%;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, .45);
+  transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.feat:hover { transform: translateY(-4px); border-color: rgba(255, 47, 179, .55); box-shadow: 0 0 26px rgba(255, 47, 179, .3), 0 14px 34px rgba(0, 0, 0, .55); }
+.feat i { font-size: 2rem; color: var(--cyan); text-shadow: 0 0 16px rgba(0, 212, 255, .7); }
+.feat h3 { font-size: 1.15rem; margin: .8rem 0 .5rem; }
+.feat p { color: #aeb7dd; margin: 0; }
+
+.glow-table { border-radius: 14px; overflow: hidden; border: 1px solid rgba(0, 212, 255, .25); box-shadow: 0 0 26px rgba(0, 212, 255, .18), 0 10px 30px rgba(0, 0, 0, .5); }
+.glow-table code { color: var(--orange); }
+
+.shot {
+  border-radius: 14px; overflow: hidden; margin: 0;
+  border: 1px solid rgba(0, 212, 255, .25);
+  box-shadow: 0 10px 34px rgba(0, 0, 0, .55);
+  transition: transform .15s ease, box-shadow .2s ease;
+  background: var(--navy-2);
+}
+.shot:hover { transform: scale(1.015); box-shadow: 0 0 30px rgba(0, 212, 255, .35), 0 14px 40px rgba(0, 0, 0, .6); }
+.shot figcaption { padding: .7rem 1rem; color: #aeb7dd; font-size: .9rem; }
+
+.install {
+  background: rgba(17, 22, 58, .9);
+  border: 1px solid rgba(255, 154, 0, .3);
+  border-radius: 14px; padding: 1.4rem; height: 100%;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, .5);
+}
+.install h3 { font-size: 1.2rem; }
+.install pre { background: #060818; border: 1px solid rgba(0, 212, 255, .25); border-radius: 8px; padding: .7rem; color: #7ef0c8; font-size: .82rem; }
+footer { border-top: 1px solid rgba(0, 212, 255, .18); background: rgba(6, 8, 24, .7); }
+.power { color: var(--cyan); font-weight: 600; text-shadow: 0 0 14px rgba(0, 212, 255, .6); }
+footer a { color: var(--orange); }

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VectorSv 4.0 — Ilustración vectorial libre y gratuita</title>
+  <meta name="description" content="VectorSv es un editor de ilustración vectorial gratuito y de código abierto: la alternativa libre a Adobe Illustrator. Descarga el .deb, .rpm o AppImage para Linux.">
+  <link rel="icon" type="image/png" href="img/icon-64.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark nav-glass">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
+        <img src="img/icon-64.png" alt="VectorSv" width="34" height="34" class="brand-icon">
+        <strong>Vector<span class="text-sv">Sv</span></strong>
+        <span class="badge version-badge ms-1">4.0</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#caracteristicas">Características</a></li>
+          <li class="nav-item"><a class="nav-link" href="#formatos">Formatos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
+          <li class="nav-item"><a class="nav-link" href="#instalar">Instalar</a></li>
+          <li class="nav-item"><a class="btn btn-neon ms-lg-3 mt-2 mt-lg-0" href="#descargar"><i class="bi bi-download me-1"></i>Descargar</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="inicio" class="hero">
+    <div class="container text-center">
+      <img src="img/icon-256.png" alt="Icono de VectorSv" class="hero-icon" width="168" height="168">
+      <h1 class="display-3 fw-bold mt-4">Vector<span class="text-sv">Sv</span></h1>
+      <p class="lead hero-sub">Ilustración vectorial profesional.<br class="d-sm-none"> Gratis. Libre. Sin suscripciones.</p>
+      <p class="hero-desc mx-auto">VectorSv es un editor de gráficos vectoriales <strong>gratuito y de código abierto</strong>: la alternativa libre a Adobe Illustrator. Dibuja con la pluma Bézier, trabaja con texto, degradados, mesas de trabajo y efectos en vivo, y abre tus archivos <strong>EPS, SVG, PDF e Illustrator (.ai)</strong> tal cual. Escrito en Rust puro: rápido, estable y multiplataforma.</p>
+      <div class="d-flex flex-wrap justify-content-center gap-3 mt-4" id="descargar">
+        <a class="btn btn-neon btn-lg dl-card" href="downloads/vectorsv-4.0.0-linux-x86_64.deb" download>
+          <i class="bi bi-box-seam"></i><span><strong>.deb</strong><small>Debian · Ubuntu · Mint · · 55 MB</small></span>
+        </a>
+        <a class="btn btn-neon btn-lg dl-card dl-magenta" href="downloads/vectorsv-4.0.0-linux-x86_64.rpm" download>
+          <i class="bi bi-box-seam"></i><span><strong>.rpm</strong><small>Fedora · openSUSE · RHEL · · 55 MB</small></span>
+        </a>
+        <a class="btn btn-neon btn-lg dl-card dl-orange" href="downloads/vectorsv-4.0.0-linux-x86_64.AppImage" download>
+          <i class="bi bi-lightning-charge"></i><span><strong>AppImage</strong><small>Portable, sin instalar · · 50 MB</small></span>
+        </a>
+      </div>
+      <p class="mt-3 text-dim"><i class="bi bi-pc-display me-1"></i>Linux x86_64 · Versión 4.0.0 · Licencia MIT / Apache-2.0</p>
+    </div>
+  </header>
+
+  <!-- FEATURES -->
+  <section id="caracteristicas" class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">Todo lo que esperas de un ilustrador profesional</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4"><div class="feat"><i class="bi bi-pen"></i><h3>Pluma Bézier de precisión</h3><p>Trazados, nodos, curvas y puntos de ancla con control total: desplaza, simplifica y duplica con un clic.</p></div></div>
+        <div class="col-md-6 col-lg-4"><div class="feat"><i class="bi bi-file-earmark-post"></i><h3>Abre EPS, AI y PDF</h3><p>Importa Encapsulated PostScript, PDF y archivos compatibles con Illustrator conservando capas, texto y estilos.</p></div></div>
+        <div class="col-md-6 col-lg-4"><div class="feat"><i class="bi bi-type"></i><h3>Texto profesional</h3><p>Texto en punto y en área, estilos de párrafo, contorneo a trazados y búsqueda de fuentes del sistema.</p></div></div>
+        <div class="col-md-6 col-lg-4"><div class="feat"><i class="bi bi-palette"></i><h3>Color y degradados</h3><p>RGB, CMYK, grises y tintas planas; degradados lineales y radiales, mallas, transparencia y modos de fusión.</p></div></div>
+        <div class="col-md-6 col-lg-4"><div class="feat"><i class="bi bi-layers"></i><h3>Capas y mesas de trabajo</h3><p>Capas, subcapas, plantillas, guías, cuadrículas y múltiples mesas de trabajo por documento.</p></div></div>
+        <div class="col-md-6 col-lg-4"><div class="feat"><i class="bi bi-lightning"></i><h3>Rápido y estable</h3><p>Motor en Rust con renderizado por GPU a 60+ fps. Tus archivos se recuperan solos si algo falla.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMATS -->
+  <section id="formatos" class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center mb-4">Guarda y exporta en tus formatos</h2>
+      <div class="table-responsive glow-table">
+        <table class="table table-dark table-striped align-middle mb-0">
+          <thead><tr><th>Formato</th><th>Extensión</th><th>Uso</th></tr></thead>
+          <tbody>
+            <tr><td><strong>VectorSv</strong></td><td><code>.vectorsv</code></td><td>Formato nativo: guarda todo editable</td></tr>
+            <tr><td>Plantilla</td><td><code>.vctemplate</code></td><td>Plantillas reutilizables</td></tr>
+            <tr><td>PDF</td><td><code>.pdf</code></td><td>Documento portable, con edición preservada</td></tr>
+            <tr><td>SVG / SVG comprimido</td><td><code>.svg</code> <code>.svgz</code></td><td>Gráficos para web</td></tr>
+            <tr><td>Encapsulated PostScript</td><td><code>.eps</code></td><td>Intercambio con imprenta y otros editores</td></tr>
+            <tr><td>PNG · JPEG · WebP · TIFF…</td><td><code>.png</code>…</td><td>Exportación ráster a cualquier resolución</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="galeria" class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center mb-4">VectorSv en acción</h2>
+      <p class="text-center text-dim mb-4">Archivos EPS reales abiertos y editados en VectorSv 4.0.</p>
+      <div class="row g-4">
+        <div class="col-md-6"><figure class="shot"><img src="img/shot-eps-brochure.png" class="img-fluid" alt="Folleto EPS abierto en VectorSv" loading="lazy"><figcaption>Folleto tríptico EPS · trazados y texto editables</figcaption></figure></div>
+        <div class="col-md-6"><figure class="shot"><img src="img/shot-eps-flyer.png" class="img-fluid" alt="Volante EPS abierto en VectorSv" loading="lazy"><figcaption>Volante corporativo EPS · capas y estilos intactos</figcaption></figure></div>
+        <div class="col-md-6"><figure class="shot"><img src="img/shot-eps-detail.png" class="img-fluid" alt="Detalle de edición de nodos en VectorSv" loading="lazy"><figcaption>Edición de nodos al detalle · 67 fps</figcaption></figure></div>
+        <div class="col-md-6"><figure class="shot"><img src="img/shot-about.png" class="img-fluid" alt="Acerca de VectorSv" loading="lazy"><figcaption>Acerca de VectorSv · Power by Agdala 2026</figcaption></figure></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTALL -->
+  <section id="instalar" class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center mb-4">Instalación en 1 minuto</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4"><div class="install"><h3><i class="bi bi-box-seam me-2"></i>.deb</h3><pre>sudo dpkg -i vectorsv-4.0.0-linux-x86_64.deb</pre><p class="text-dim">Debian, Ubuntu, Mint, Pop!_OS…</p></div></div>
+        <div class="col-md-4"><div class="install"><h3><i class="bi bi-box-seam me-2"></i>.rpm</h3><pre>sudo rpm -i vectorsv-4.0.0-linux-x86_64.rpm</pre><p class="text-dim">Fedora, openSUSE, RHEL…</p></div></div>
+        <div class="col-md-4"><div class="install"><h3><i class="bi bi-lightning-charge me-2"></i>AppImage</h3><pre>chmod +x vectorsv-4.0.0-linux-x86_64.AppImage
+./vectorsv-4.0.0-linux-x86_64.AppImage</pre><p class="text-dim">Cualquier distro, sin instalar.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-4 text-center">
+    <div class="container">
+      <img src="img/icon-64.png" alt="VectorSv" width="44" height="44" class="mb-2">
+      <p class="mb-1"><strong>Vector<span class="text-sv">Sv</span> 4.0</strong> · Ilustración vectorial libre y gratuita · MIT / Apache-2.0</p>
+      <p class="power mb-1">Power by Agdala 2026</p>
+      <p class="mb-0"><i class="bi bi-envelope me-1"></i><a href="mailto:agdala.sv@gmail.com">agdala.sv@gmail.com</a></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/particles.js"></script>
+</body>
+</html>
